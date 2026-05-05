@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://csjj1v1j1je1v1v"]
+
+[ext_resource type="Script" path="res://scripts/game_manager.gd"]
+[ext_resource type="Script" path="res://scripts/player.gd"]
+
+[node name="Main" type="Node2D"]
+script = SubResource("GDScript_a1b2c")
+
+[node name="GameManager" type="Node" parent="."]
+script = ExtResource("res://scripts/game_manager.gd")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="GameManager"]
+
+[node name="ScoreLabel" type="Label" parent="GameManager/CanvasLayer"]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 150.0
+offset_bottom = 40.0
+text = "分數: 0"
+
+[node name="CoinsLabel" type="Label" parent="GameManager/CanvasLayer"]
+offset_left = 10.0
+offset_top = 50.0
+offset_right = 150.0
+offset_bottom = 80.0
+text = "金幣: 0/0"
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(100, 100)
+script = ExtResource("res://scripts/player.gd")

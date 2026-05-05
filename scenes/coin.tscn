@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://coin123456"]
+
+[ext_resource type="Script" path="res://scripts/coin.gd"]
+
+[node name="Coin" type="Area2D"]
+script = ExtResource("res://scripts/coin.gd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = CircleShape2D.new()
+shape.radius = 10.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+self_modulate = Color(1, 0.84, 0, 1)  # 金色
+scale = Vector2(1, 1)
