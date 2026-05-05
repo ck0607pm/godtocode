@@ -1,13 +1,12 @@
 [gd_scene load_steps=3 format=3 uid="uid://csjj1v1j1je1v1v"]
 
-[ext_resource type="Script" path="res://scripts/game_manager.gd"]
-[ext_resource type="Script" path="res://scripts/player.gd"]
+[ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_abcde"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="2_fghij"]
 
 [node name="Main" type="Node2D"]
-script = SubResource("GDScript_a1b2c")
 
 [node name="GameManager" type="Node" parent="."]
-script = ExtResource("res://scripts/game_manager.gd")
+script = ExtResource("1_abcde")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="GameManager"]
 
@@ -27,4 +26,4 @@ text = "金幣: 0/0"
 
 [node name="Player" type="CharacterBody2D" parent="."]
 position = Vector2(100, 100)
-script = ExtResource("res://scripts/player.gd")
+script = ExtResource("2_fghij")
