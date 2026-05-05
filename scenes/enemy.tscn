@@ -1,14 +1,13 @@
 [gd_scene load_steps=2 format=3 uid="uid://enemy123456"]
 
-[ext_resource type="Script" path="res://scripts/enemy.gd"]
+[ext_resource type="Script" path="res://scripts/enemy.gd" id="1_enemy"]
 
 [node name="Enemy" type="CharacterBody2D"]
-script = ExtResource("res://scripts/enemy.gd")
+script = ExtResource("1_enemy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = RectangleShape2D.new()
-shape.size = Vector2(20, 20)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-self_modulate = Color(1, 0.2, 0.2, 1)  # 紅色
+self_modulate = Color(1, 0.2, 0.2, 1)
 scale = Vector2(1.5, 1.5)
